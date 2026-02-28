@@ -18,6 +18,14 @@ inputs:
   http_proxy:
     description: 'Proxy server'
     required: false
+  timeout:
+    description: 'Download timeout in milliseconds'
+    default: '30000'
+    required: false
+  retries:
+    description: 'Number of download retry attempts'
+    default: '3'
+    required: false
 runs:
   using: 'node20'
   main: 'dist/index.js'
